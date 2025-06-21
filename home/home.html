@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falta1 - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbar-top">
+          <div class="logo-section">
+            <img src="../images/logo.png" alt="Logo Falta1" class="logo-img" />
+            <p class="equipo-text">Equipo <span class="bold"></span></p>
+          </div>
+          <hr class="divider" />
+        </div>
+        <ul class="nav-links">
+          <li>Inicio</li>
+          <li>Jugar</li>
+          <li>Torneos</li>
+          <li>Calendario</li>
+        </ul>
+        <div>
+          <ul class="extras">
+            <hr class="divider" />
+            <li>Tienda</li>
+            <li>Beneficios</li>
+          </ul>
+          <ul class="logout-section">
+            <hr class="divider" />
+            <button type="button" class="logout" id="logout">
+              Cerrar Sesion
+            </button>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Contenido principal -->
+      <main class="main-content">
+        <!-- Ofertas -->
+        <section class="ofertas">
+          <div class="oferta-texto">
+            <p>
+              Completa ahora el formulario <br />
+              y obten un <strong>15% de descuento</strong> <br />
+              en locales deportivos.
+            </p>
+          </div>
+          <div class="iconos">
+            <img src="../images/pelota.png" alt="Pelota" />
+            <img src="../images/botin.png" alt="Botín" />
+          </div>
+        </section>
+
+        <!-- Estadísticas -->
+        <section class="estadisticas">
+          <div class="equipo-info">
+            <img id="escudo-equipo" alt="Escudo equipo" />
+            <span class="nombre-equipo"></span>
+          </div>
+
+          <div class="estadisticas-inferior">
+            <div class="datos">
+              <p class="titulo">Partidos ganados</p>
+              <h2>36</h2>
+              <hr />
+              <p class="titulo">Torneo</p>
+              <h3>2</h3>
+            </div>
+
+            <div class="buscar-partido">
+              <div class="cancha">
+                <span>20 PARTIDOS<br />EN ESPERA</span>
+              </div>
+              <button>BUSCAR PARTIDO</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

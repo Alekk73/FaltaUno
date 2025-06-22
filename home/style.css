@@ -7,7 +7,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   background-color: #e6f0ec;
 }
@@ -155,7 +156,8 @@ body, html {
   flex-wrap: wrap;
 }
 
-.datos, .buscar-partido {
+.datos,
+.buscar-partido {
   background-color: #f9f9f9;
   border-radius: 16px;
   padding: 25px;
@@ -236,6 +238,19 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.logout-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.logout {
+  background-color: #ff0000;
+}
+
+.logout:hover {
+  background-color: #7a0202;
 }
 
 button:hover {
@@ -356,4 +371,3 @@ button:hover {
     font-size: 20px;
   }
 }
-

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1751026924997,
+    "idEquipoLocal": 1751026404997,
+    "idEquipoVisitante": 1751026803063,
+    "cancha": "cancha 1",
+    "fecha": "2025-30-06",
+    "hora": "16",
+    "creadoPor": "test1@mail.com",
+    "estado": "pendiente"
+  },
+  {
+    "id": 1751226404997,
+    "idEquipoLocal": 1751026780982,
+    "idEquipoVisitante": 1751026404997,
+    "cancha": "cancha 3",
+    "fecha": "2025-04-07",
+    "hora": "19",
+    "creadoPor": "test2@mail.com",
+    "estado": "pendiente"
+  },
+  {
+    "id": 1751026924657,
+    "idEquipoLocal": 1751026404997,
+    "idEquipoVisitante": null,
+    "cancha": "cancha 5",
+    "fecha": "2025-17-07",
+    "hora": "22",
+    "creadoPor": "test1@mail.com",
+    "estado": "pendiente"
+  }
+]

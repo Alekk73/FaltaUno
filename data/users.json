@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1751026404997,
+    "email": "test1@mail.com",
+    "password": "1234",
+    "team_name": "Barcha",
+    "team_shield": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+  },
+  {
+    "id": 1751026407911,
+    "email": "test2@mail.com",
+    "password": "1234",
+    "team_name": "Manshine City",
+    "team_shield": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg"
+  },
+  {
+    "id": 1751026803063,
+    "email": "test3@mail.com",
+    "password": "1234",
+    "team_name": "Benfica",
+    "team_shield": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Emblema_Benfica_1930_%28Sem_fundo%29.png"
+  },
+  {
+    "id": 1751026796219,
+    "email": "test4@mail.com",
+    "password": "1234",
+    "team_name": "PSG",
+    "team_shield": "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg"
+  },
+  {
+    "id": 1751026788362,
+    "email": "test5@mail.com",
+    "password": "1234",
+    "team_name": "Real Madrid",
+    "team_shield": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg"
+  },
+  {
+    "id": 1751026780982,
+    "email": "test6@mail.com",
+    "password": "1234",
+    "team_name": "Independiente",
+    "team_shield": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Escudo_del_Club_Atl%C3%A9tico_Independiente.svg/1200px-Escudo_del_Club_Atl%C3%A9tico_Independiente.svg.png"
+  },
+  {
+    "id": 1751026769945,
+    "email": "test7@mail.com",
+    "password": "1234",
+    "team_name": "Huracán",
+    "team_shield": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Emblema_oficial_del_Club_Atl%C3%A9tico_Hurac%C3%A1n.svg/631px-Emblema_oficial_del_Club_Atl%C3%A9tico_Hurac%C3%A1n.svg.png"
+  },
+  {
+    "id": 1751026759288,
+    "email": "test7@mail.com",
+    "password": "1234",
+    "team_name": "Arsenal",
+    "team_shield": "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg"
+  }
+]

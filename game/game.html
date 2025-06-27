@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/png" />
+    <title>Falta1</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/nabvar.css" />
+    <link rel="stylesheet" href="/css/genera-styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbar-top">
+          <div class="logo-section">
+            <img src="../images/logo.png" alt="Logo Falta1" class="logo-img" />
+            <p class="equipo-text">Equipo <span class="bold"></span></p>
+          </div>
+          <hr class="divider" />
+        </div>
+        <ul class="nav-links">
+          <a href="/home/home.html">
+            <li>Inicio</li>
+          </a>
+          <a href="/game/game.html">
+            <li>Jugar</li>
+          </a>
+          <li>Torneos</li>
+          <li>Calendario</li>
+        </ul>
+        <div>
+          <ul class="extras">
+            <hr class="divider" />
+            <li>Tienda</li>
+            <li>Beneficios</li>
+          </ul>
+          <ul class="logout-section">
+            <hr class="divider" />
+            <button type="button" class="logout" id="logout">
+              Cerrar Sesion
+            </button>
+          </ul>
+        </div>
+      </nav>
+      <div class="main-content">
+        <!-- Botones -->
+        <div class="top-buttons">
+          <button>CREAR PARTIDO</button>
+          <button>COMPLETAR PARTIDO</button>
+          <button>VER CALENDARIO</button>
+        </div>
+
+        <!-- Grid de Canchas -->
+        <div class="grid-canchas" id="container-cards"></div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+          <span class="close-button" id="closeModal">&times;</span>
+          <h2>CREAR PARTIDO</h2>
+          <form class="modal-form" id="crearPartidoForm">
+            <input
+              type="text"
+              placeholder="Nombre del equipo"
+              id="nombre-equipo"
+              disabled
+            />
+            <select id="select-cancha">
+              <option value="" disabled selected>Cancha</option>
+            </select>
+            <input type="date" id="fecha" />
+            <select id="select-horario">
+              <option value="" disabled selected>Horario</option>
+            </select>
+            <button type="submit">Crear</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

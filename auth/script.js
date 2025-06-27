@@ -38,43 +38,43 @@ if (toLogin) {
   });
 }
 
-// Lista de usuarios temporal
-const users = [
-  {
-    id: 1,
-    email: "test1@mail.com",
-    password: "1234",
-    team_name: "Barcha",
-    team_shield:
-      "https://upload.wikimedia.org/wikipedia/sco/thumb/4/47/FC_Barcelona_%28crest%29.svg/2020px-FC_Barcelona_%28crest%29.svg.png",
-  },
-  {
-    id: 2,
-    email: "test2@mail.com",
-    password: "1234",
-    team_name: "Manshine City",
-    team_shield:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png",
-  },
-];
-
 // Login
 if (loginForm) {
-  loginForm.addEventListener("submit", (e) => {
+  loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const email = document.getElementById("login-email").value;
     const password = document.getElementById("login-password").value;
 
-    const user = users.find(
-      (u) => u.email === email && u.password === password
-    );
+    try {
+      let users = JSON.parse(localStorage.getItem("allUsers"));
+      let matches = JSON.parse(localStorage.getItem("matches"));
 
-    if (user) {
-      localStorage.setItem("userLogged", JSON.stringify(user));
-      window.location.href = "../home/home.html";
-    } else {
-      alert("Credenciales incorrectas.");
+      if (!users || !matches) {
+        const resUsers = await fetch("../data/users.json");
+        users = await resUsers.json();
+
+        const resMatches = await fetch("../data/matches.json");
+        matches = await resMatches.json();
+
+        localStorage.setItem("allUsers", JSON.stringify(users));
+        localStorage.setItem("matches", JSON.stringify(matches));
+      }
+
+      const found = users.find(
+        (u) => u.email === email && u.password === password
+      );
+
+      if (found) {
+        alert("✅ Login correcto");
+        const { password, ...safeUser } = found;
+        localStorage.setItem("userLogged", JSON.stringify(safeUser));
+        window.location.href = "../home/home.html";
+      } else {
+        alert("❌ Usuario o contraseña incorrectos");
+      }
+    } catch (error) {
+      console.error("Error al cargar usuarios", error);
+      alert("Error interno");
     }
   });
 }

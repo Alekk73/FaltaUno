@@ -1,17 +1,40 @@
-/* Tipografía y reset */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.main-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
-body {
-  background-color: #e6f0ec;
-  padding: 20px;
+/* Navbar */
+button {
+  padding: 14px 28px;
+  background-color: #00994d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+.logout-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.logout {
+  background-color: #ff0000;
+}
+
+.logout:hover {
+  background-color: #7a0202;
+}
+
+/* button:hover {
+  background-color: #006837;
+} */
 
 .top-buttons {
   display: flex;
@@ -116,15 +139,22 @@ body {
 .placeholder {
   background-color: #d7fada;
   border: 2px dashed #00994d;
-  padding: 14px 0;
+  padding: 14px 3px;
   border-radius: 10px;
   font-weight: 600;
   color: #065f2d;
-  width: 80px;
+  width: min-content;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.esperando {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  border: none;
 }
 
 .modal-overlay {

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partidos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-content">
+      <!-- Botones -->
+      <div class="top-buttons">
+        <button>CREAR PARTIDO</button>
+        <button>COMPLETAR PARTIDO</button>
+        <button>VER CALENDARIO</button>
+      </div>
+
+      <!-- Grid de Canchas -->
+      <div class="grid-canchas">
+        <!-- Cancha 1 -->
+        <div class="card-partido">
+          <h3>Cancha 1</h3>
+          <div class="equipos">
+            <div class="equipo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+                alt="Barcha"
+              />
+              <span>Barcha</span>
+            </div>
+            <span class="vs">vs</span>
+            <div class="equipo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Emblema_Benfica_1930_%28Sem_fundo%29.png"
+                alt="Benfica"
+              />
+              <span>Benfica</span>
+            </div>
+          </div>
+          <p class="fecha">6/5/2025 18HS</p>
+        </div>
+
+        <!-- Cancha 2 -->
+        <div class="card-partido">
+          <h3>Cancha 2</h3>
+          <div class="equipos">
+            <div class="equipo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg"
+                alt="London"
+              />
+              <span>London</span>
+            </div>
+            <span class="vs">vs</span>
+            <div class="equipo placeholder">JUGAR +</div>
+          </div>
+          <p class="fecha">6/5/2025 20HS</p>
+        </div>
+
+        <!-- Cancha 3 -->
+        <div class="card-partido">
+          <h3>Cancha 3</h3>
+          <div class="equipos">
+            <div class="equipo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg"
+                alt="PSG"
+              />
+              <span>PSG</span>
+            </div>
+            <span class="vs">vs</span>
+            <div class="equipo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg"
+                alt="Real Madrid"
+              />
+              <span>Real Madrid</span>
+            </div>
+          </div>
+          <p class="fecha">6/5/2025 21HS</p>
+        </div>
+
+        <!-- Cancha 4 -->
+        <div class="card-partido">
+          <h3>Cancha 4</h3>
+          <div class="equipos">
+            <div class="equipo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Escudo_del_Club_Atl%C3%A9tico_Independiente.svg/1200px-Escudo_del_Club_Atl%C3%A9tico_Independiente.svg.png"
+                alt="Independiente"
+              />
+              <span>Independiente</span>
+            </div>
+            <span class="vs">vs</span>
+            <div class="equipo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Emblema_oficial_del_Club_Atl%C3%A9tico_Hurac%C3%A1n.svg/631px-Emblema_oficial_del_Club_Atl%C3%A9tico_Hurac%C3%A1n.svg.png"
+                alt="Huracán"
+              />
+              <span>Huracán</span>
+            </div>
+          </div>
+          <p class="fecha">6/5/2025 22HS</p>
+        </div>
+
+        <!-- Cancha 5 -->
+        <div class="card-partido">
+          <h3>Cancha 5</h3>
+          <div class="equipos">
+            <div class="equipo placeholder">JUGAR +</div>
+            <span class="vs">vs</span>
+            <div class="equipo placeholder">JUGAR +</div>
+          </div>
+          <p class="fecha">6/5/2025 23HS</p>
+        </div>
+
+        <!-- Cancha 6 -->
+        <div class="card-partido">
+          <h3>Cancha 6</h3>
+          <div class="equipos">
+            <div class="equipo placeholder">JUGAR +</div>
+            <span class="vs">vs</span>
+            <div class="equipo placeholder">JUGAR +</div>
+          </div>
+          <p class="fecha">6/5/2025 00HS</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+        <h2>CREAR PARTIDO</h2>
+        <form class="modal-form" id="crearPartidoForm">
+          <input type="text" placeholder="Nombre del equipo" required />
+          <select>
+            <option value="" disabled selected>Cancha</option>
+            <option value="1">Cancha 1</option>
+            <option value="2">Cancha 2</option>
+            <option value="3">Cancha 3</option>
+            <option value="4">Cancha 4</option>
+            <option value="5">Cancha 5</option>
+            <option value="6">Cancha 6</option>
+          </select>
+          <select>
+            <option value="" disabled selected>Horario</option>
+            <option>18HS</option>
+            <option>19HS</option>
+            <option>20HS</option>
+            <option>21HS</option>
+            <option>22HS</option>
+            <option>23HS</option>
+            <option>00HS</option>
+          </select>
+          <button type="submit">Crear</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -45,25 +45,26 @@ export const activarLogout = () => {
 // --- MANEJO DE EVENTOS ---
 openBtn.addEventListener("click", () => {
   modal.style.display = "flex";
+
   const user = usuarioActivo();
   const nombreEquipo = document.getElementById("nombre-equipo");
   nombreEquipo.value = user.team_name;
 
+  selectCancha.innerHTML =
+    "<option disabled selected>Elegí una cancha</option>";
+  selectHorario.innerHTML =
+    "<option disabled selected>Elegí un horario</option>";
+
   canchas.forEach((cancha) => createOption(cancha, selectCancha));
   horarios.forEach((horario) => createOption(horario, selectHorario));
-});
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
+  closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
-  }
+  });
 });
 
 const crearTarjetaPartido = (equipoLocal, equipoVisitante, partido) => {
+  const user = usuarioActivo();
   const tarjetaPartido = document.createElement("div");
   tarjetaPartido.className = "card-partido";
   tarjetaPartido.dataset.id = partido.id;
@@ -84,7 +85,7 @@ const crearTarjetaPartido = (equipoLocal, equipoVisitante, partido) => {
       <span>${equipoVisitante.team_name}</span>
     </div>
     `
-        : usuarioActivo().id === equipoLocal.id
+        : user.id === equipoLocal.id
         ? `<button class="equipo placeholder esperando" disabled>ESPERANDO...</button>`
         : `<button class="equipo placeholder btn-unirse" data-id="${partido.id}">JUGAR +</button>`
     }
@@ -96,8 +97,8 @@ const crearTarjetaPartido = (equipoLocal, equipoVisitante, partido) => {
 };
 
 const mostrarTarjetas = () => {
-  const partidos = JSON.parse(localStorage.getItem("matches")) || [];
-  const usuarios = JSON.parse(localStorage.getItem("allUsers")) || [];
+  let partidos = obtenerDeLocalStorage("matches");
+  const usuarios = obtenerDeLocalStorage("allUsers");
 
   const contenedor = document.querySelector(".grid-canchas");
   contenedor.innerHTML = "";
@@ -117,21 +118,22 @@ const crearPartido = () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const user = usuarioActivo();
     const fecha = document.getElementById("fecha").value;
-    const partidos = JSON.parse(localStorage.getItem("matches")) || [];
+    let partidos = obtenerDeLocalStorage("matches");
 
     const nuevoPartido = {
       id: Date.now(),
-      idEquipoLocal: usuarioActivo().id,
+      idEquipoLocal: user.id,
       idEquipoVisitante: null,
       cancha: selectCancha.value,
       fecha,
       hora: selectHorario.value,
-      creadoPor: usuarioActivo().email,
+      creadoPor: user.email,
     };
 
     partidos.push(nuevoPartido);
-    localStorage.setItem("matches", JSON.stringify(partidos));
+    guardarEnLocalStorage("matches", partidos);
 
     form.reset();
     modal.style.display = "none";
@@ -140,33 +142,45 @@ const crearPartido = () => {
   });
 };
 
-const unirsePartido = () => {
-  document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("btn-unirse")) {
-      const matchCard = e.target.closest(".card-partido");
-      const matchId = matchCard.dataset.id;
+function obtenerDeLocalStorage(clave, valorPorDefecto = []) {
+  const item = localStorage.getItem(clave);
+  try {
+    return item ? JSON.parse(item) : valorPorDefecto;
+  } catch {
+    return valorPorDefecto;
+  }
+}
 
-      let partidos = JSON.parse(localStorage.getItem("matches")) || [];
-      const partido = partidos.find((p) => p.id === Number(matchId));
+function guardarEnLocalStorage(clave, valor) {
+  localStorage.setItem(clave, JSON.stringify(valor));
+}
 
-      if (partido) {
-        partido.idEquipoVisitante = usuarioActivo().id;
+document.addEventListener("click", (e) => {
+  const matchCard = e.target.closest(".card-partido");
+  if (!matchCard) return;
 
-        localStorage.setItem("matches", JSON.stringify(partidos));
+  const matchId = Number(matchCard.dataset.id);
+  let partidos = obtenerDeLocalStorage("matches");
 
-        mostrarTarjetas();
-      }
+  // Unirse
+  if (e.target.classList.contains("btn-unirse")) {
+    const user = usuarioActivo();
+    const partido = partidos.find((p) => p.id === matchId);
+    if (partido) {
+      partido.idEquipoVisitante = user.id;
+      guardarEnLocalStorage("matches", partidos);
+      mostrarTarjetas();
     }
-  });
-};
+  }
+});
 
 const verificarSesion = () => {
-  if (!usuarioActivo()) window.location.href = "../auth/login-register.html";
+  const user = usuarioActivo();
+  if (!user) window.location.href = "../auth/login-register.html";
 };
 
 const inicializarUI = () => {
   mostrarTarjetas();
-  unirsePartido();
   activarLogout();
 };
 

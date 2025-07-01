@@ -93,6 +93,22 @@ const crearTarjetaPartido = (equipoLocal, equipoVisitante, partido) => {
   <p class="fecha">${partido.fecha} / ${partido.hora}:00 HS</p>
 `;
 
+const btnEliminar = document.createElement("button");
+  btnEliminar.className = "btn-delete btn-card-estilo";
+  btnEliminar.textContent = "Eliminar";
+
+  const btnRetirarse = document.createElement("button");
+  btnRetirarse.className = "btn-withdraw btn-card-estilo";
+  btnRetirarse.textContent = "Retirarse";
+
+  if (partido.idEquipoLocal === user.id) {
+    tarjetaPartido.appendChild(btnEliminar);
+  }
+
+  if (partido.idEquipoVisitante === user.id) {
+    tarjetaPartido.appendChild(btnRetirarse);
+  }
+
   return tarjetaPartido;
 };
 
@@ -115,6 +131,7 @@ const mostrarTarjetas = () => {
 };
 
 const crearPartido = () => {
+  
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -122,6 +139,10 @@ const crearPartido = () => {
     const fecha = document.getElementById("fecha").value;
     let partidos = obtenerDeLocalStorage("matches");
 
+    if (!fecha || !selectHorario || !selectCancha) {
+  alert("Por favor, completá todos los campos para crear el partido.");
+  return;
+}
     const nuevoPartido = {
       id: Date.now(),
       idEquipoLocal: user.id,
@@ -131,6 +152,18 @@ const crearPartido = () => {
       hora: selectHorario.value,
       creadoPor: user.email,
     };
+
+     // Verificar existencia de partido cancha
+    const yaExiste = partidos.some(
+      (p) =>
+        p.cancha === nuevoPartido.cancha &&
+        p.fecha === nuevoPartido.fecha &&
+        p.hora === nuevoPartido.hora
+    );
+    if (yaExiste) {
+      alert("Ya hay un partido en esa cancha, fecha y hora.");
+      return;
+    }
 
     partidos.push(nuevoPartido);
     guardarEnLocalStorage("matches", partidos);
@@ -168,6 +201,22 @@ document.addEventListener("click", (e) => {
     const partido = partidos.find((p) => p.id === matchId);
     if (partido) {
       partido.idEquipoVisitante = user.id;
+      guardarEnLocalStorage("matches", partidos);
+      mostrarTarjetas();
+    }
+  }
+   // Eliminar
+  if (e.target.classList.contains("btn-delete")) {
+    partidos = partidos.filter((p) => p.id !== matchId);
+    guardarEnLocalStorage("matches", partidos);
+    mostrarTarjetas();
+  }
+
+  // Retirarse
+  if (e.target.classList.contains("btn-withdraw")) {
+    const partido = partidos.find((p) => p.id === matchId);
+    if (partido) {
+      partido.idEquipoVisitante = null;
       guardarEnLocalStorage("matches", partidos);
       mostrarTarjetas();
     }

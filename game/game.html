@@ -7,6 +7,7 @@
     <title>Falta1</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../css/nabvar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/genera-styles.css" />
   </head>
   <body>
@@ -22,39 +23,44 @@
         </div>
         <ul class="nav-links">
           <a href="../home/home.html">
-            <li>Inicio</li>
+          <li>Inicio</li>
           </a>
           <a href="../game/game.html">
             <li>Jugar</li>
           </a>
-          <li>Torneos</li>
-          <li>Calendario</li>
+          <a href="../proximamente/proximamente.html">
+            <li>Torneos</li>
+          </a>
+          <a href="../proximamente/proximamente.html">
+            <li>Calendario</li>
+          </a>
         </ul>
         <div>
           <ul class="extras">
             <hr class="divider" />
-            <li>Tienda</li>
-            <li>Beneficios</li>
+            <a href="../proximamente/proximamente.html">
+              <li>Tienda</li>
+            </a>
+            <a href="../proximamente/proximamente.html">
+              <li>Beneficios</li>
+            </a>
           </ul>
           <ul class="logout-section">
             <hr class="divider" />
             <button type="button" class="logout" id="logout">
-              Cerrar Sesion
+              Cerrar Sesión
             </button>
           </ul>
         </div>
       </nav>
-      <div class="main-content">
-        <!-- Botones -->
+      <main class="main-content">
         <div class="top-buttons">
           <button>CREAR PARTIDO</button>
           <button>COMPLETAR PARTIDO</button>
           <button>VER CALENDARIO</button>
         </div>
-
-        <!-- Grid de Canchas -->
         <div class="grid-canchas" id="container-cards"></div>
-      </div>
+      </main>
 
       <!-- Modal -->
       <div class="modal-overlay" id="modal">
@@ -79,38 +85,29 @@
           </form>
         </div>
       </div>
-      <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-section">
-      <img src="../images/logo.png" alt="Logo Falta1" class="footer-logo" />
-      <p class="footer-slogan">Tu equipo, tus reglas.</p>
     </div>
 
-    <div class="footer-section">
-      <h4>Secciones</h4>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="/game/game.html">Jugar</a></li>
-        <li><a href="#">Torneos</a></li>
-        <li><a href="#">Calendario</a></li>
-        <li><a href="#">Tienda</a></li>
-        <li><a href="#">Beneficios</a></li>
-      </ul>
-    </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-wrapper">
+        <div class="footer-links left">
+          <a href="#">Torneos</a>
+          <a href="#">Beneficios</a>
+          <a href="#">Términos</a>
+        </div>
+        <div class="footer-center">
+          <img src="../images/logo.png" alt="Logo Falta1" class="footer-logo" />
+          <p class="footer-desc">Conectando equipos, creando competencia.</p>
+          <p>© 2025 Falta1 - Todos los derechos reservados</p>
+        </div>
+        <div class="footer-links right">
+          <a href="#">Contacto</a>
+          <a href="#">Instagram</a>
+          <a href="#">Privacidad</a>
+        </div>
+      </div>
+    </footer>
 
-    <div class="footer-section">
-      <h4>Contacto</h4>
-      <p>Email: contacto@falta1.com</p>
-      <p>Instagram: @falta1.app</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 Falta1. Todos los derechos reservados.</p>
-  </div>
-</footer>
-
-    </div>
     <script type="module" src="script.js"></script>
   </body>
 </html>

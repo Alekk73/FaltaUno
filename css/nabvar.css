@@ -9,6 +9,11 @@
   color: #d5ffd5;
 }
 
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .logo-section {
   display: flex;
   flex-direction: column;
@@ -56,3 +61,75 @@
   background-color: #1e2f25;
   color: #b6f7b6;
 }
+
+@media (max-width: 768px) {
+
+  .navbar {
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .navbar-top {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links,
+  .extras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .nav-links li,
+  .extras li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .divider {
+    width: 80%;
+    margin: 16px auto;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .ofertas {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .iconos img {
+    width: 50px;
+  }
+
+  .estadisticas-inferior {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .datos,
+  .buscar-partido {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+

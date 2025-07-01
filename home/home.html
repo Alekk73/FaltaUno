@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falta1 - Home</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/genera-styles.css" />
+    <link rel="stylesheet" href="../css/nabvar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbar-top">
+          <div class="logo-section">
+            <img src="../images/logo.png" alt="Logo Falta1" class="logo-img" />
+            <p class="equipo-text">Equipo <span class="bold"></span></p>
+          </div>
+          <hr class="divider" />
+        </div>
+        <ul class="nav-links">
+          <li>Inicio</li>
+          <a href="../game/game.html">
+            <li>Jugar</li>
+          </a>
+          <a href="../proximamente/proximamente.html">
+            <li>Torneos</li>
+          </a>
+          <a href="../proximamente/proximamente.html">
+            <li>Calendario</li>
+          </a>
+        </ul>
+        <div>
+          <ul class="extras">
+            <hr class="divider" />
+            <a href="../proximamente/proximamente.html">
+              <li>Tienda</li>
+            </a>
+            <a href="../proximamente/proximamente.html">
+              <li>Beneficios</li>
+            </a>
+          </ul>
+          <ul class="logout-section">
+            <hr class="divider" />
+            <button type="button" class="logout" id="logout">
+              Cerrar Sesión
+            </button>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="main-content">
+        <!-- Ofertas -->
+        <a
+          href="https://www.opensports.com.ar/"
+          target="_blank"
+          class="oferta-link"
+        >
+          <section class="ofertas">
+            <div class="oferta-texto">
+              <p>
+                Completa ahora el formulario <br />
+                y obten un <strong>15% de descuento</strong> <br />
+                en locales deportivos.
+              </p>
+            </div>
+            <div class="iconos">
+              <img src="../images/pelota.png" alt="Pelota" />
+              <img src="../images/botin.png" alt="Botín" />
+            </div>
+          </section>
+        </a>
+
+        <!-- Estadísticas -->
+        <section class="estadisticas">
+          <div class="equipo-info">
+            <img id="escudo-equipo" alt="Escudo equipo" />
+            <span class="nombre-equipo"></span>
+          </div>
+
+          <div class="estadisticas-inferior">
+            <div class="datos">
+              <p class="titulo">Partidos ganados</p>
+              <h2>36</h2>
+              <hr />
+              <p class="titulo">Torneo</p>
+              <h3>2</h3>
+            </div>
+
+            <div class="buscar-partido">
+              <div class="cancha">
+                <span>20 PARTIDOS<br />EN ESPERA</span>
+              </div>
+              <a href="../game/game.html">BUSCAR PARTIDO</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-wrapper">
+        <div class="footer-links left">
+          <a href="#">Torneos</a>
+          <a href="#">Beneficios</a>
+          <a href="#">Términos</a>
+        </div>
+        <div class="footer-center">
+          <img src="../images/logo.png" alt="Logo Falta1" class="footer-logo" />
+          <p class="footer-desc">Conectando equipos, creando competencia.</p>
+          <p>© 2025 Falta1 - Todos los derechos reservados</p>
+        </div>
+        <div class="footer-links right">
+          <a href="#">Contacto</a>
+          <a href="#">Instagram</a>
+          <a href="#">Privacidad</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+.main-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow-y: auto;
+}
+
+.ofertas {
+  background: linear-gradient(to right, #d7fada, #a6f1af);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding: 30px 60px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.oferta-texto p {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #065f2d;
+}
+
+.iconos {
+  display: flex;
+  gap: 25px;
+}
+
+.iconos img {
+  width: 65px;
+  transition: transform 0.3s;
+}
+
+.iconos img:hover {
+  transform: scale(1.1);
+}
+
+.estadisticas {
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.equipo-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.equipo-info img {
+  width: 55px;
+}
+
+.nombre-equipo {
+  font-weight: 700;
+  font-size: 24px;
+  color: #333;
+}
+
+.estadisticas-inferior {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.datos,
+.buscar-partido {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  padding: 25px;
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.buscar-partido a {
+  padding: 14px 28px;
+  background-color: #00994d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.datos:hover,
+.buscar-partido:hover {
+  transform: translateY(-5px);
+}
+
+.datos .titulo {
+  font-weight: bold;
+  font-size: 16px;
+  color: #555;
+}
+
+.datos h2 {
+  font-size: 38px;
+  color: #007e33;
+}
+
+.datos h3 {
+  font-size: 28px;
+  color: #00994d;
+}
+
+.datos hr {
+  height: 2px;
+  background-color: #ccc;
+  border: none;
+  margin: 15px auto;
+  width: 60%;
+  border-radius: 5px;
+}
+
+.cancha {
+  background-image: url("https://i.pinimg.com/736x/29/3b/c5/293bc5455a53d6ae9662ca14b9f7a947.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 60px 20px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
+}
+
+.cancha::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 14px;
+  z-index: 0;
+}
+
+.cancha span {
+  position: relative;
+  z-index: 1;
+  line-height: 1.5;
+}
+
+
+
+
+button:hover {
+  background-color: #006837;
+}
+
+
+@media (max-width: 600px) {
+  .equipo-text {
+    font-size: 14px;
+  }
+
+  .oferta-texto p {
+    font-size: 18px;
+  }
+
+  .datos h2 {
+    font-size: 32px;
+  }
+
+  .datos h3 {
+    font-size: 24px;
+  }
+
+  .cancha {
+    font-size: 18px;
+    padding: 40px 15px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+
+  .logo-img {
+    width: 45px;
+  }
+
+  .equipo-info img {
+    width: 45px;
+  }
+
+  .nombre-equipo {
+    font-size: 20px;
+  }
+}       

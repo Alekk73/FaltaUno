@@ -1,4 +1,3 @@
-/* Main Content */
 .main-content {
   flex: 1;
   padding: 40px;
@@ -8,7 +7,6 @@
   overflow-y: auto;
 }
 
-/* Ofertas */
 .ofertas {
   background: linear-gradient(to right, #d7fada, #a6f1af);
   display: flex;
@@ -41,7 +39,6 @@
   transform: scale(1.1);
 }
 
-/* Estadísticas */
 .estadisticas {
   background-color: #ffffff;
   padding: 35px;
@@ -176,80 +173,6 @@ button:hover {
   background-color: #006837;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .navbar {
-    width: 100%;
-    border-radius: 0 0 16px 16px;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .navbar-top {
-    width: 100%;
-    text-align: center;
-  }
-
-  .logo-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .nav-links,
-  .extras {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-left: 0;
-  }
-
-  .nav-links li,
-  .extras li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .divider {
-    width: 80%;
-    margin: 16px auto;
-  }
-
-  .main-content {
-    padding: 20px;
-  }
-
-  .ofertas {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .iconos img {
-    width: 50px;
-  }
-
-  .estadisticas-inferior {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .datos,
-  .buscar-partido {
-    width: 100%;
-  }
-
-  button {
-    width: 100%;
-  }
-}
 
 @media (max-width: 600px) {
   .equipo-text {
@@ -288,80 +211,5 @@ button:hover {
 
   .nombre-equipo {
     font-size: 20px;
-  }
-}
-
-.footer {
-  background: linear-gradient(to right, #065f2d, #00994d);
-  color: white;
-  padding: 40px 20px 20px;
-  border-radius: 20px 20px 0 0;
-  margin-top: 40px;
-  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 200px;
-}
-
-.footer-logo {
-  width: 60px;
-  margin-bottom: 10px;
-}
-
-.footer-slogan {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.footer-section h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #ffffff33;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin-bottom: 8px;
-}
-
-.footer-section ul li a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-section ul li a:hover {
-  text-decoration: underline;
-  color: #d7fada;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #ffffff33;
-  font-size: 14px;
-  margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 }

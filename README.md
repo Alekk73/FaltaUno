@@ -6,7 +6,8 @@
 
 ## Estado del Proyecto
 
-Actualmente en desarrollo:  
+Actualmente en desarrollo:
+
 - Frontend funcional en HTML, CSS y JavaScript.
 - Demos implementadas de:
   - Login
@@ -57,42 +58,58 @@ Actualmente en desarrollo:
 
 ## Demos Actuales
 
-- **Login**  
+- **Login**
+
   - Formulario de ingreso con validaciones básicas.
 
-- **CRUD**  
+- **CRUD**
   - Crear, leer, actualizar y eliminar elementos en base a partidos (simulado en frontend).
 
 ---
 
 ## Tecnologías utilizadas
 
-- **Lenguajes**:  
-  - HTML5  
-  - CSS3  
+- **Lenguajes**:
+
+  - HTML5
+  - CSS3
   - JavaScript (Vanilla JS)
 
-- **Control de versiones**:  
+- **Control de versiones**:
   - Git + GitHub
 
 ---
 
 ## Estructura actual del proyecto
+
 ```
-└── 📁FaltaUno
-    └── 📁auth
-        ├── login-register.html
+Directory structure:
+└── FaltaUno/
+    ├── README.md
+    ├── auth/
+    │   ├── login-register.html
+    │   ├── script.js
+    │   └── style.css
+    ├── css/
+    │   ├── footer.css
+    │   ├── genera-styles.css
+    │   └── nabvar.css
+    ├── data/
+    │   ├── matches.json
+    │   └── users.json
+    ├── game/
+    │   ├── game.html
+    │   ├── script.js
+    │   └── style.css
+    ├── home/
+    │   ├── home.html
+    │   ├── script.js
+    │   └── style.css
+    ├── images/
+    └── proximamente/
+        ├── proximamente.html
         ├── script.js
-        ├── style.css
-    └── 📁home
-        ├── home.html
-        ├── script.js
-        ├── style.css
-    └── 📁images
-        ├── botin.png
-        ├── logo.png
-        ├── pelota.png
-    └── README.md
+        └── style.css
 ```
 
 [Carpeta DRIVE](https://drive.google.com/drive/folders/11IThWPghH7XK5cH4OUGhG1CWNaR4DNNs?usp=drive_link)

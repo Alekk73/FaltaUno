@@ -93,7 +93,7 @@ const crearTarjetaPartido = (equipoLocal, equipoVisitante, partido) => {
   <p class="fecha">${partido.fecha} / ${partido.hora}:00 HS</p>
 `;
 
-const btnEliminar = document.createElement("button");
+  const btnEliminar = document.createElement("button");
   btnEliminar.className = "btn-delete btn-card-estilo";
   btnEliminar.textContent = "Eliminar";
 
@@ -131,7 +131,6 @@ const mostrarTarjetas = () => {
 };
 
 const crearPartido = () => {
-  
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -140,9 +139,9 @@ const crearPartido = () => {
     let partidos = obtenerDeLocalStorage("matches");
 
     if (!fecha || !selectHorario || !selectCancha) {
-  alert("Por favor, completá todos los campos para crear el partido.");
-  return;
-}
+      alert("Por favor, completá todos los campos para crear el partido.");
+      return;
+    }
     const nuevoPartido = {
       id: Date.now(),
       idEquipoLocal: user.id,
@@ -153,7 +152,7 @@ const crearPartido = () => {
       creadoPor: user.email,
     };
 
-     // Verificar existencia de partido cancha
+    // Verificar existencia de partido cancha
     const yaExiste = partidos.some(
       (p) =>
         p.cancha === nuevoPartido.cancha &&
@@ -205,7 +204,7 @@ document.addEventListener("click", (e) => {
       mostrarTarjetas();
     }
   }
-   // Eliminar
+  // Eliminar
   if (e.target.classList.contains("btn-delete")) {
     partidos = partidos.filter((p) => p.id !== matchId);
     guardarEnLocalStorage("matches", partidos);
@@ -229,6 +228,11 @@ const verificarSesion = () => {
 };
 
 const inicializarUI = () => {
+  const user = usuarioActivo();
+
+  const nameTeamNavbar = document.querySelector(".equipo-text span");
+  nameTeamNavbar.textContent = user.team_name;
+
   mostrarTarjetas();
   activarLogout();
 };

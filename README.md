@@ -1,17 +1,6 @@
 # 🏆 Falta1 - App de Reservas y Beneficios para Deportistas Amateur
 
-**Falta1** es una aplicación web desarrollada en **HTML, CSS y JavaScript puro** (Vanilla JS), pensada para mejorar la experiencia de organización en el deporte amateur. Ayuda a los jugadores a reservar canchas, encontrar rivales, completar equipos y acceder a beneficios exclusivos, todo desde una plataforma fácil de usar.
-
----
-
-## Estado del Proyecto
-
-Actualmente en desarrollo:
-
-- Frontend funcional en HTML, CSS y JavaScript.
-- Demos implementadas de:
-  - Login
-  - CRUD en proceso (alta, baja, modificación y visualización de datos)
+**Falta1** es una aplicación web pensada para mejorar la experiencia de organización en el deporte amateur. Ayuda a los jugadores a reservar canchas, encontrar rivales, completar equipos y acceder a beneficios exclusivos, todo desde una plataforma fácil de usar.
 
 ---
 
@@ -56,60 +45,13 @@ Actualmente en desarrollo:
 
 ---
 
-## Demos Actuales
-
-- **Login**
-
-  - Formulario de ingreso con validaciones básicas.
-
-- **CRUD**
-  - Crear, leer, actualizar y eliminar elementos en base a partidos (simulado en frontend).
-
----
-
-## Tecnologías utilizadas
-
-- **Lenguajes**:
-
-  - HTML5
-  - CSS3
-  - JavaScript (Vanilla JS)
-
-- **Control de versiones**:
-  - Git + GitHub
-
----
-
-## Estructura actual del proyecto
+## Estructura del directorio
 
 ```
-Directory structure:
-└── FaltaUno/
-    ├── README.md
-    ├── auth/
-    │   ├── login-register.html
-    │   ├── script.js
-    │   └── style.css
-    ├── css/
-    │   ├── footer.css
-    │   ├── genera-styles.css
-    │   └── nabvar.css
-    ├── data/
-    │   ├── matches.json
-    │   └── users.json
-    ├── game/
-    │   ├── game.html
-    │   ├── script.js
-    │   └── style.css
-    ├── home/
-    │   ├── home.html
-    │   ├── script.js
-    │   └── style.css
-    ├── images/
-    └── proximamente/
-        ├── proximamente.html
-        ├── script.js
-        └── style.css
+Estructura directorio:
+└── Primera Etapa (1er Cuatrimestre)
+└── Segunda Etapa (2do Cuatrimestre)
+└── README.md
 ```
 
 [Carpeta DRIVE](https://drive.google.com/drive/folders/11IThWPghH7XK5cH4OUGhG1CWNaR4DNNs?usp=drive_link)

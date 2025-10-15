@@ -50,7 +50,6 @@
 ```
 Estructura directorio:
 └── Primera Etapa (1er Cuatrimestre)
-└── Segunda Etapa (2do Cuatrimestre)
 └── README.md
 ```
 
